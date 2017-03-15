@@ -1,0 +1,8 @@
+<a ui-sref="bookmarkManager.categories"></a>
+<ul class="nav nav-sidebar">
+    <li ng-repeat="category in categoriesListCtrl.categories" ng-class="{'active':isCurrentCategory(category)}">
+        <a ui-sref="bookmarkManager.categories.bookmarks({category:category.name})">
+            {{category.name}}
+        </a>
+    </li>
+</ul>
